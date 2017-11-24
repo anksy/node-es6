@@ -13,7 +13,7 @@ exports.checkAdminAccount = (req, res)=>{
 	    if (!result) {
 	        var admin = {
 	        	username : "admin",
-	            email: 'user@flexsin.com',
+	            email: 'user@example.com',
 	            password: '123456',
 	            type: 1,
 	            auth: crypto.randomBytes(10).toString('hex')
