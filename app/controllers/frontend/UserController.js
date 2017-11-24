@@ -121,7 +121,7 @@ class UserController extends App {
 				},(err, result) => {
 					if(err) res.json({type:"error",message:error.oops(),errors:error.pull(err)});
 
-					mailer.Email(obj.username,'otp','app/views/',{body:{otp:hash},subject:"Verify Your Email Address - Steward"});
+					mailer.Email(obj.username,'otp','app/views/',{body:{otp:hash},subject:"Verify Your Email Address"});
 					return res.json({type:"success",message:"OTP has been sent to your email address."});
 				});
 			}else{
